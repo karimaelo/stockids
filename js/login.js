@@ -75,7 +75,22 @@ function supportsHTML5Storage() {
  */
 function testLocalStorageData() {
     if (!supportsHTML5Storage()) { return false; }
+    var userEmail = $('#inputEmail').val();
+    var userPass = $('#inputPassword').val();
     localStorage.setItem("PROFILE_IMG_SRC", "//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120");
-    localStorage.setItem("PROFILE_NAME", "César Izquierdo Tello");
-    localStorage.setItem("PROFILE_REAUTH_EMAIL", "oneaccount@gmail.com");
+    //localStorage.setItem("PROFILE_NAME", );
+    localStorage.setItem("PROFILE_REAUTH_EMAIL", userEmail);
+    localStorage.setItem("isAuthenticated", "true");
+}
+
+function correctUser() {
+    var userEmail = $('#inputEmail').val();
+    var userPass = $('#inputPassword').val();
+    if ((userEmail == 'sm@gmail.com' || userEmail == 'karimaelo@gmail.com' || userEmail == 'idontknow@noone.ca')  && userPass == 'chase123') {
+        testLocalStorageData();
+
+        window.location.href = "index.html";
+    } else {
+        alert('User name or password is inncorrect (username is your email and password is "chase123")');
+    }
 }

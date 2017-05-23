@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Stockids</title>
+    <script type="text/javascript" src="js/vendor/jquery-1.11.2.min.js"></script>
     <script type="text/javascript" src="js/login.js"></script>
     <link href="css/login.css" rel="stylesheet" />
     <link href="css/bootstrap.min.css" rel="stylesheet" />
@@ -25,7 +26,7 @@
                         <input type="checkbox" value="remember-me"> Remember me
                     </label>
                 </div>
-                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+                <button class="btn btn-lg btn-primary btn-block btn-signin" onclick="correctUser()" type="button">Sign in</button>
             </form><!-- /form -->
             <a href="#" class="forgot-password">
                 Forgot the password?
