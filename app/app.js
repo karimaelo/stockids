@@ -34,6 +34,7 @@ stockidsApp.controller('StockidsAppController', function StockidsAppController($
           email: 'karimaelo@gmail.com',
           password: 'chase123',
           selected: 'false',
+          amount: 1000,
           portfolio: [
               {
                   stockcode: 'DIS',
@@ -73,6 +74,7 @@ stockidsApp.controller('StockidsAppController', function StockidsAppController($
 		    email: 'sm@gmail.com',
 	        password: 'chase123',
 	        selected: 'false',
+            amount: 10000,
 	        portfolio: [
                 {
                     stockcode: 'DIS',
@@ -112,6 +114,7 @@ stockidsApp.controller('StockidsAppController', function StockidsAppController($
 	        email: 'idontknow@noone.ca',
 	        password: 'chase123',
 	        selected: 'false',
+	        amount: 25000,
 	        portfolio: [
                 {
                     stockcode: 'DIS',
