@@ -8,21 +8,23 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	    <link rel="stylesheet" href="css/bootstrap.min.css">
-	    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
-	    <script type="text/javascript" src="js/vendor/jquery-1.11.2.min.js"></script>
 	    <link href="css/bootstrap.min.css" rel="stylesheet" />
 	    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
 	    
-	  	<script src="app/app.js"></script>
-        <script src="js/security.js"></script>
 	</head>
     <body ng-app="stockidsApp" onload="isAuthenticated();">
         <p><a href="#login">Login</a></p>
         <p><a href="#dashboard">Dashboard</a></p>
         <p><a href="#profile">Profile</a></p>
         <p><a href="#leaderboard">Leaderboard</a></p>
+        <p><a href="#transaction">Buy/Sell Stocks</a></p>
         <ng-view></ng-view>
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+        <script type="text/javascript" src="js/vendor/jquery-1.11.2.min.js"></script>
+        <script src="app/app.js"></script>
+        <script src="js/security.js"></script>
     </body>
 </html>

@@ -17,7 +17,12 @@ stockidsApp.config(function($routeProvider) {
 	    .when('/leaderboard', {
 	        templateUrl: 'app/views/leaderboard.html',
     		controller: 'StockidsAppController'
-	    }).otherwise({
+	    })
+	    .when('/transaction', {
+	        templateUrl: 'app/views/transaction.html',
+	        controller: 'StockidsAppController'
+	    })
+        .otherwise({
 	    	redirectTo: '/dashboard'
 	    });
 	  });
