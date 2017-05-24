@@ -10,28 +10,24 @@
 	    <link rel="stylesheet" href="css/bootstrap.min.css">
 	    <link href="css/bootstrap.min.css" rel="stylesheet" />
 	    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-	    
+        <link href="css/login.css" rel="stylesheet" />    
 	</head>
     <body ng-app="stockidsApp" onload="isAuthenticated();">
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="/index.html">Stockids</a>
+                    <a class="navbar-brand" href="#!/dashboard">Stockids</a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#profile">Profile</a></li>
-                        <li><a href="#leaderboard">Leaderboard</a></li>
-                        <li><a href="#transaction">Buy/Sell Stocks</a></li>
+                        <li><a href="#!/login">Login</a></li>
+                        <li><a href="#!/#profile">Profile</a></li>
+                        <li><a href="#!/#leaderboard">Leaderboard</a></li>
+                        <li><a href="#!/#transaction">Buy/Sell Stocks</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <p><a href="#!/login">Login</a></p>
-        <p><a href="#!/dashboard">Dashboard</a></p>
-        <p><a href="#!/profile">Profile</a></p>
-        <p><a href="#!/leaderboard">Leaderboard</a></p>
-        <p><a href="#!/transaction">Buy/Sell Stocks</a></p>
         <ng-view></ng-view>
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
@@ -41,5 +37,6 @@
         <script src="app/app.js"></script>
         <script src="controllers/dashboardController.js"></script>
         <script src="js/security.js"></script>
+        <script type="text/javascript" src="js/login.js"></script>
     </body>
 </html>
