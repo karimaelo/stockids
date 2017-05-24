@@ -10,8 +10,8 @@ body, html {
 }
 
 .card-container.card {
-    max-width: 350px;
-    padding: 40px 40px;
+    max-width: 300px;
+    padding: 20px 20px;
 }
 
 .btn {
@@ -42,8 +42,8 @@ body, html {
 }
 
 .profile-img-card {
-    width: 96px;
-    height: 96px;
+    width: 150px;
+    height: 150px;
     margin: 0 auto 10px;
     display: block;
     -moz-border-radius: 50%;
