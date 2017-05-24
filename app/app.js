@@ -16,7 +16,7 @@ stockidsApp.config(function($routeProvider) {
 	    })
 	    .when('/leaderboard', {
 	        templateUrl: 'app/views/leaderboard.html',
-    		controller: 'StockidsAppController'
+    		controller: 'LeaderboardController'
 	    })
 	    .when('/transaction', {
 	        templateUrl: 'app/views/transaction.html',
