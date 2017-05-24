@@ -8,7 +8,7 @@ stockidsApp.config(function($routeProvider) {
 	    })
 	    .when('/dashboard', {
 	        templateUrl: 'app/views/dashboard.html',
-    		controller: 'StockidsAppController'
+    		controller: 'DashboardController'
 	    })
 	    .when('/profile', {
 	        templateUrl: 'app/views/profile.html',
@@ -22,10 +22,14 @@ stockidsApp.config(function($routeProvider) {
 	        templateUrl: 'app/views/transaction.html',
 	        controller: 'StockidsAppController'
 	    })
+        .when('/data/', {
+            redirectTo: '/data/'
+        })
         .otherwise({
 	    	redirectTo: '/dashboard'
 	    });
 	  });
+
 
 stockidsApp.controller('StockidsAppController', function StockidsAppController($scope) {
     $scope.users = [
