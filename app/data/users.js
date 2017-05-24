@@ -4,6 +4,7 @@
           email: 'karimaelo@gmail.com',
           password: 'chase123',
           selected: 'false',
+          image: 'images/boy1.jpg',
           portfolio: [
               {
                   stockcode: 'DIS',
@@ -43,6 +44,7 @@
 	        email: 'sm@gmail.com',
 	        password: 'chase123',
 	        selected: 'false',
+	        image: 'images/boy2.jpg',
 	        portfolio: [
                 {
                     stockcode: 'DIS',
@@ -82,6 +84,7 @@
 	        email: 'idontknow@noone.ca',
 	        password: 'chase123',
 	        selected: 'false',
+	        image: 'images/boy3.jpg',
 	        portfolio: [
                 {
                     stockcode: 'DIS',
@@ -115,5 +118,45 @@
                     soldprice: 0,
                     quantity: 500
                 }]
-	    }
+	    },
+        {
+            username: 'elissa',
+            email: 'elissa@school.edu',
+            password: 'chase123',
+            selected: 'false',
+            image: 'images/girl1.jpg',
+            portfolio: [
+                {
+                    stockcode: 'DIS',
+                    boughtdate: '2017/05/23',
+                    boughtprice: 900,
+                    solddate: '',
+                    soldprice: 0,
+                    quantity: 1000
+                },
+                {
+                    stockcode: 'DIS',
+                    boughtdate: '2017/05/21',
+                    boughtprice: 1000,
+                    solddate: '2017/05/22',
+                    soldprice: 1000,
+                    quantity: 500
+                },
+                {
+                    stockcode: 'MSFT',
+                    boughtdate: '2017/05/23',
+                    boughtprice: 150,
+                    solddate: '',
+                    soldprice: 0,
+                    quantity: 10000
+                },
+                {
+                    stockcode: 'MAT',
+                    boughtdate: '2017/05/23',
+                    boughtprice: 900,
+                    solddate: '',
+                    soldprice: 0,
+                    quantity: 500
+                }]
+        }
 ];
