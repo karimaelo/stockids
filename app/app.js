@@ -36,7 +36,7 @@ stockidsApp.controller('StockidsAppController', function StockidsAppController($
           selected: 'false',
           portfolio: [
               {
-                  stockcode: 'AMZN',
+                  stockcode: 'DIS',
                   boughtdate: '2017/05/23',
                   boughtprice: 950,
                   solddate: '',
@@ -44,7 +44,7 @@ stockidsApp.controller('StockidsAppController', function StockidsAppController($
                   quantity: 1000
               },
               {
-                  stockcode: 'AMZN',
+                  stockcode: 'DIS',
                   boughtdate: '2017/05/21',
                   boughtprice: 900,
                   solddate: '2017/05/22',
@@ -52,7 +52,7 @@ stockidsApp.controller('StockidsAppController', function StockidsAppController($
                   quantity: 500
               },
               {
-                  stockcode: 'AAPL',
+                  stockcode: 'MSFT',
                   boughtdate: '2017/05/20',
                   boughtprice: 100,
                   solddate: '',
@@ -60,7 +60,7 @@ stockidsApp.controller('StockidsAppController', function StockidsAppController($
                   quantity: 10000
               },
               {
-                  stockcode: 'GOOGL',
+                  stockcode: 'MAT',
                   boughtdate: '2017/05/20',
                   boughtprice: 900,
                   solddate: '',
@@ -75,7 +75,7 @@ stockidsApp.controller('StockidsAppController', function StockidsAppController($
 	        selected: 'false',
 	        portfolio: [
                 {
-                    stockcode: 'AMZN',
+                    stockcode: 'DIS',
                     boughtdate: '2017/05/20',
                     boughtprice: 2000,
                     solddate: '2017/05/22',
@@ -83,7 +83,7 @@ stockidsApp.controller('StockidsAppController', function StockidsAppController($
                     quantity: 500
                 },
                 {
-                    stockcode: 'AMZN',
+                    stockcode: 'DIS',
                     boughtdate: '2017/05/21',
                     boughtprice: 800,
                     solddate: '2017/05/22',
@@ -91,7 +91,7 @@ stockidsApp.controller('StockidsAppController', function StockidsAppController($
                     quantity: 200
                 },
                 {
-                    stockcode: 'AAPL',
+                    stockcode: 'MSFT',
                     boughtdate: '2017/05/21',
                     boughtprice: 120,
                     solddate: '',
@@ -99,7 +99,7 @@ stockidsApp.controller('StockidsAppController', function StockidsAppController($
                     quantity: 100000
                 },
                 {
-                    stockcode: 'GOOGL',
+                    stockcode: 'MAT',
                     boughtdate: '2017/05/20',
                     boughtprice: 900,
                     solddate: '',
@@ -114,7 +114,7 @@ stockidsApp.controller('StockidsAppController', function StockidsAppController($
 	        selected: 'false',
 	        portfolio: [
                 {
-                    stockcode: 'AMZN',
+                    stockcode: 'DIS',
                     boughtdate: '2017/05/23',
                     boughtprice: 900,
                     solddate: '',
@@ -122,7 +122,7 @@ stockidsApp.controller('StockidsAppController', function StockidsAppController($
                     quantity: 1000
                 },
                 {
-                    stockcode: 'AMZN',
+                    stockcode: 'DIS',
                     boughtdate: '2017/05/21',
                     boughtprice: 1000,
                     solddate: '2017/05/22',
@@ -130,7 +130,7 @@ stockidsApp.controller('StockidsAppController', function StockidsAppController($
                     quantity: 500
                 },
                 {
-                    stockcode: 'AAPL',
+                    stockcode: 'MSFT',
                     boughtdate: '2017/05/23',
                     boughtprice: 150,
                     solddate: '',
@@ -138,7 +138,7 @@ stockidsApp.controller('StockidsAppController', function StockidsAppController($
                     quantity: 10000
                 },
                 {
-                    stockcode: 'GOOGL',
+                    stockcode: 'MAT',
                     boughtdate: '2017/05/23',
                     boughtprice: 900,
                     solddate: '',
@@ -149,11 +149,11 @@ stockidsApp.controller('StockidsAppController', function StockidsAppController($
     ];
     $scope.stocks = [
         {
-            name: 'Amazon.com Inc.',
-            code: 'AMZN',
+            name: 'Disney Inc.',
+            code: 'DIS',
             currdate: '2017/05/24',
             currprice: 975,
-            stockindex: 'NASDAQ',
+            stockindex: 'NYSE',
             indexcountry: 'US',
             history: [
                 {
@@ -179,8 +179,8 @@ stockidsApp.controller('StockidsAppController', function StockidsAppController($
             ]
         },
         {
-            name: 'Apple Inc.',
-            code: 'AAPL',
+            name: 'Microsoft Inc.',
+            code: 'MSFT',
             currdate: '2017/05/24',
             currprice: 155,
             stockindex: 'NASDAQ',
@@ -209,8 +209,8 @@ stockidsApp.controller('StockidsAppController', function StockidsAppController($
             ]
         },
         {
-            name: 'Alphabet Inc.',
-            code: 'GOOGL',
+            name: 'Mattel Inc.',
+            code: 'MAT',
             currdate: '2017/05/24',
             currprice: 975,
             stockindex: 'NASDAQ',
