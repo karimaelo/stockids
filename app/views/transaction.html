@@ -1,9 +1,11 @@
 <div class="transaction">
     <div class="main-background">
-        <select class="form-control" id="selecttxn">
-            <option ng-repeat="option in options" value="{{option.id}}">{{stock.name}}</option>
+        {{message}}
+        <select name="option-group" id="optionGroup" class="form-control"
+                ng-model="optionSelected" ng-change="onOptionsChange(optionSelected)">
+            <option ng-repeat="option in options" value="{{option.id}}">{{option.name}}</option>
         </select>
-        <div name="buysection">
+        <div name="buysection" ng-show="buySelected" ng-hide="sellSelected">
             <div class="form-group">
                 <label for="sel1">Stock Name:</label>
                 <select class="form-control" id="selectbuystock">
