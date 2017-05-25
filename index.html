@@ -21,12 +21,12 @@
                     <a class="navbar-brand" href="#">StocKids</a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#!/login">Login</a></li>
+                    <ul class="nav navbar-nav navbar-right">                        
                         <li><a href="#!/dashboard">Dashboard</a></li>
                         <li><a href="#!/profile">Profile</a></li>
                         <li><a href="#!/leaderboard">Leaderboard</a></li>
                         <li><a href="#!/transaction">Buy/Sell Stocks</a></li>
+                        <li ng-show="user != null"><a href="#!/login">Logout</a></li>
                     </ul>
                 </div>
             </div>
