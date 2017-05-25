@@ -3,24 +3,29 @@ var stockidsApp = angular.module('stockidsApp', ['ngRoute']);
 stockidsApp.config(function($routeProvider) {
 	  $routeProvider.
 	    when('/login', {
-		templateUrl: 'app/views/login.html',
-		controller: 'LoginController'
+    		templateUrl: 'app/views/login.html',
+    		controller: 'LoginController',
+            controllerAs: 'login'
 	    })
 	    .when('/dashboard', {
 	        templateUrl: 'app/views/dashboard.html',
-    		controller: 'DashboardController'
+	        controller: 'DashboardController',
+	        controllerAs: 'dashboard'
 	    })
 	    .when('/profile', {
 	        templateUrl: 'app/views/profile.html',
-    		controller: 'ProfileController'
+	        controller: 'ProfileController',
+	        controllerAs: 'profile'
 	    })
 	    .when('/leaderboard', {
 	        templateUrl: 'app/views/leaderboard.html',
-    		controller: 'LeaderboardController'
+	        controller: 'LeaderboardController',
+	        controllerAs: 'leaderboard'
 	    })
 	    .when('/transaction', {
 	        templateUrl: 'app/views/transaction.html',
-	        controller: 'TransactionController'
+	        controller: 'TransactionController',
+	        controllerAs: 'transaction'
 	    })
         .when('/data/', {
             redirectTo: '/data/'
