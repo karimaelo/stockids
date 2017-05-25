@@ -1,0 +1,60 @@
+.transaction {
+	width: 100%;
+	height: 100%;
+	background-repeat:repeat-x;
+    background-attachment:fixed;
+    background-position: left top;	
+	background-size: cover;
+	background-color: #ADD8E6;
+	position: absolute;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.transaction h1 {
+	margin: 20px;
+	padding: 25px;
+	//transform: rotate(-25deg);
+	background-color: black;
+	opacity: 0.75;
+	color: white;
+	font-size: 2em;
+	max-width: 1000px;
+}
+
+.transaction p {
+	margin: 20px;
+	padding: 25px;
+	//transform: rotate(-25deg);
+	background-color: black;
+	opacity: 0.75;
+	color: white;
+	font-size: 1em;
+	max-width: 940px;
+}
+
+
+.transaction .main-background {
+	//transform: rotate(-25deg);
+	background-color: orange;
+    justify-content: center;
+	color: white;
+	font-size: 1em;
+	max-width: 600px;
+}
+
+.transaction .main-background  .separator {
+	border-top: 1px solid white;
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+	border-bottom: 1px solid white;
+	border-collapse: separate; 
+	border-spacing: 5px;
+	
+}
+

@@ -1,1 +1,41 @@
-Transaction
+<div class="transaction">
+    <div class="main-background">
+        <select class="form-control" id="selecttxn">
+            <option ng-repeat="option in options" value="{{option.id}}">{{stock.name}}</option>
+        </select>
+        <div name="buysection">
+            <div class="form-group">
+                <label for="sel1">Stock Name:</label>
+                <select class="form-control" id="selectbuystock">
+                    <option ng-repeat="stock in stocks" value="{{stock.code}}">{{stock.name}}</option>
+                </select>
+            </div>
+
+            <label for="sel1">Current Stock Price:</label>
+            <input type="text" class="form-control" id="selectbuystockprice" value="{{stock.currprice}}">
+
+            <label for="sel1">Quantity to Buy:</label>
+            <input type="text" class="form-control" id="selectbuyquantity">
+        </div>
+
+        <div name="sellsection">
+            <div class="form-group">
+                <label for="sel1">Stock Name:</label>
+                <select class="form-control" id="selectsellstock">
+                    <option ng-repeat="stock in stocks" value="{{stock.code}}">{{stock.name}}</option>
+                </select>
+            </div>
+
+            <label for="sel1">Quantity to Sell:</label>
+            <input type="text" class="form-control" id="selectsellquantity">
+
+            <label for="sel1">Amount:</label>
+            <input type="text" class="form-control" id="selectsellstockprice">
+
+        </div>
+
+        <a href="index.html" class="btn btn-large btn-success">Submit</a>
+    </div>
+
+
+</div>

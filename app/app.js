@@ -4,7 +4,7 @@ stockidsApp.config(function($routeProvider) {
 	  $routeProvider.
 	    when('/login', {
 		templateUrl: 'app/views/login.html',
-		controller: 'StockidsAppController'
+		controller: 'LoginController'
 	    })
 	    .when('/dashboard', {
 	        templateUrl: 'app/views/dashboard.html',
@@ -12,7 +12,7 @@ stockidsApp.config(function($routeProvider) {
 	    })
 	    .when('/profile', {
 	        templateUrl: 'app/views/profile.html',
-    		controller: 'StockidsAppController'
+    		controller: 'ProfileController'
 	    })
 	    .when('/leaderboard', {
 	        templateUrl: 'app/views/leaderboard.html',
@@ -20,7 +20,7 @@ stockidsApp.config(function($routeProvider) {
 	    })
 	    .when('/transaction', {
 	        templateUrl: 'app/views/transaction.html',
-	        controller: 'StockidsAppController'
+	        controller: 'TransactionController'
 	    })
         .when('/data/', {
             redirectTo: '/data/'

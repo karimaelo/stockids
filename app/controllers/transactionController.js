@@ -2,13 +2,12 @@
     var injectParams = ['$scope', '$http'];
 
     var TransactionController = function ($scope, $http) {
-        $scope.greeting = "Hola!!!";
-        $scope.users = users;
+        $scope.options = [
+               { name: 'Buy Stocks', id: 1, checked: true },
+               { name: 'Sell Stocks', id: 2, checked: false }
+        ];
+        $scope.stocks = stocks;
         
-        $scope.totalCart = function(){
-            var total = 10;     
-            return total;
-        }        
     };
 
     TransactionController.$inject = injectParams;
