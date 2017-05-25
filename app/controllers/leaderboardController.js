@@ -5,7 +5,7 @@
     var LeaderboardController = function ($scope, $http) {
         $scope.greeting = "Hola!!!";
         $scope.users = users;
-        $scope.leaderboard = leaderboard;
+        $scope.topPlayers = topPlayers;
     };
 
     
