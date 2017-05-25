@@ -1,13 +1,13 @@
 <div class="content">
 	<div class="main-background">
 		<div class="row">
-			<div class="col-xs-6 col-md-6">
+			<div class="col-xs-12 col-md-6 col-lg-6 col-xl-6">
 				<h1>Welcome to StocKids</h1>
 				<p>StocKids is a site that encourages children to learn about
 					how stocks work by allowing them to play in a simulated stock
 					market.</p>
 			</div>
-			<div class="container">
+			<div class="col-xs-12 col-md-6 col-lg-6 col-xl-6">
 				<div class="card card-container">
 					<img id="profile-img" class="profile-img-card"
 						src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
@@ -17,10 +17,9 @@
 							placeholder="Email address" required autofocus ng-model="email">
 						<input type="password" class="form-control"
 							placeholder="Password" ng-model="password" required>
-						<div id="remember" class="checkbox" ng-model>
+						<div class="alert alert-warning" role="alert" ng-model>
 							<label> 
-								<input type="checkbox" value="remember-me">
-								Remember Me
+								{{message}}
 							</label>
 						</div>
 						<button class="btn btn-lg btn-primary btn-block btn-signin"
