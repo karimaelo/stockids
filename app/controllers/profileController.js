@@ -1,7 +1,7 @@
 ﻿(function () {
-    var injectParams = ['$scope', '$http'];
+    var injectParams = ['$scope', '$http', '$filter', '$window', '$rootScope', '$location'];
 
-    var ProfileController = function ($scope, $http) {
+    var ProfileController = function ($scope, $http, $filter, $window, $rootScope, $location) {
         $scope.greeting = "Hola!!!";
         $scope.users = users;
         

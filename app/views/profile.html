@@ -1,1 +1,33 @@
-Profile
+<div class="jumbotron">
+    <div class="container">
+        <div class="col-lg-3">
+            <img ng-src="{{user.image}}" />
+        </div>
+        <div class="col-lg-9">
+            <h1>{{user.username}}</h1>
+            <h1>{{user.email}}</h1>
+        </div>
+    </div>
+</div>    
+<div class="container">
+    <div class="row">
+        <h1>Stock History</h1>
+    </div>
+    <hr />
+    <div class="row" ng-repeat="x in user.portfolio">
+        <p><b>Stock Code:</b> {{x.stockcode}}</p>
+        <p><b>Purchase Date:</b> {{x.boughtdate | date:'yyyy/MM/dd @ h:mma'}}</p>
+        <p><b>Purchase Price:</b> {{x.boughtprice | currency:"$"}}</p>
+        <p><b>Amount of Shares:</b> {{x.quantity}}</p>
+        <div ng-if="x.soldprice > 0">
+            <p font="color:blue"><b>Status: </b>Sold</p>
+            <p><b>Date Sold</b> {{x.solddate | date:'yyyy/MM/dd @ h:mma'}}</p>
+            <p><b>Sold Price</b> {{x.soldprice | currency:"$"}}</p>
+            <p><b>Amount of Money Gained or Lossed: </b>{{x.soldprice * x.quantity - x.boughtprice * x.quantity | currency:"$"}}</p>
+        </div>
+        <div ng-if="x.soldprice == null || x.soldprice == ''">
+            <p font="color:green"><b>Status: </b>Current</p>
+        </div>
+        <hr />
+    </div>
+</div>
