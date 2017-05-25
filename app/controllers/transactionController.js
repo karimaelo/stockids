@@ -1,14 +1,13 @@
 ﻿(function () {
-    var injectParams = ['$scope', '$http', '$filter', '$window', '$rootScope'];
+    var injectParams = ['$scope', '$http', '$filter', '$window', '$rootScope', '$location'];
 
-    var TransactionController = function ($scope, $http, $filter, $window, $rootScope) {
-        $scope.message = $rootScope.user.username;
+    var TransactionController = function ($scope, $http, $filter, $window, $rootScope, $location) {
+        $scope.message = "";
 
-        $scope.buySelected = "true";
-        $scope.sellSelected = "false";
+        //$scope.buySelected = "true";
+        //$scope.sellSelected = "false";
 
         $scope.optionSelected = "1";
-
         $scope.options = [
                { name: 'Buy Stocks', id: 1 },
                { name: 'Sell Stocks', id: 2 }
@@ -17,6 +16,7 @@
         $scope.onOptionsChange = function () {
             //var currentSelected = $filter('filter')($scope.categories, { id: $scope.optionSelected })[0]
             //$window.alert("Selected Value: " + currentSelected.id + "\nSelected Text: " + currentSelected.name);
+            /*
             if ($scope.optionSelected == "1") {
                 $scope.buySelected = "true";
                 $scope.sellSelected = "false";
@@ -25,16 +25,15 @@
                 $scope.sellSelected = "true";
             }
             $scope.message = $scope.buySelected;
+            */
         };
-
-        $scope.users = users;
 
         $scope.stocks = [
             {
                 name: 'Disney Inc.',
                 code: 'DIS',
                 currdate: '2017/05/24',
-                currprice: 975,
+                currprice: 110,
                 stockindex: 'NYSE',
                 indexcountry: 'US',
                 history: [
@@ -64,7 +63,7 @@
                 name: 'Microsoft Inc.',
                 code: 'MSFT',
                 currdate: '2017/05/24',
-                currprice: 155,
+                currprice: 70,
                 stockindex: 'NASDAQ',
                 indexcountry: 'US',
                 history: [
@@ -94,7 +93,7 @@
                 name: 'Mattel Inc.',
                 code: 'MAT',
                 currdate: '2017/05/24',
-                currprice: 975,
+                currprice: 25,
                 stockindex: 'NASDAQ',
                 indexcountry: 'US',
                 history: [
@@ -121,6 +120,35 @@
                 ]
             }
         ];
+
+        $scope.buyCodeSelected = "";
+        $scope.buyStockPrice = "0";
+        $scope.buyQuantity = "0";
+        $scope.buyTotal = "0";
+
+        $scope.onBuyStocksChange = function () {
+            angular.forEach($scope.stocks, function (value, key) {
+                $scope.result = angular.fromJson(value);
+                if ($scope.buyCodeSelected == $scope.result.code) {
+                    $scope.buyStockPrice = $scope.result.currprice;
+                }
+            });
+            $scope.buyQuantity = "0";
+            $scope.buyTotal = "0";
+        };
+
+        $scope.onBuyQuantityChange = function () {
+            $scope.buyTotal = $scope.buyQuantity * $scope.buyStockPrice;
+        };
+
+        $scope.submit = function () {
+            $window.alert("Transaction Submitted!");
+            $location.path('/dashboard');
+        };
+
+
+        $scope.users = users;
+
 
     };
 

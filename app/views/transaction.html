@@ -1,42 +1,51 @@
 <div class="transaction">
     <div class="main-background">
-        {{message}}
-        <select name="option-group" id="optionGroup" class="form-control"
-                ng-model="optionSelected" ng-change="onOptionsChange(optionSelected)">
-            <option ng-repeat="option in options" value="{{option.id}}">{{option.name}}</option>
-        </select>
-        <div name="buysection" ng-show="buySelected" ng-hide="sellSelected">
-            <div class="form-group">
-                <label for="sel1">Stock Name:</label>
-                <select class="form-control" id="selectbuystock">
-                    <option ng-repeat="stock in stocks" value="{{stock.code}}">{{stock.name}}</option>
-                </select>
+        <form name="txnForm" class="form-signin" ng-submit="transaction.submit()" role="form">
+
+            <select name="option-group" id="optionGroup" class="form-control"
+                    ng-model="optionSelected" ng-change="onOptionsChange(optionSelected)">
+                <option ng-repeat="option in options" value="{{option.id}}">{{option.name}}</option>
+            </select>
+            <div name="buysection" ng-show="optionSelected=='1'" class="check-element animate-show-hide">
+                <div class="form-group">
+                    <label for="sel1">Stock Name:</label>
+                    <select name="option-group" id="selectbuystock" class="form-control"
+                            ng-model="buyCodeSelected" ng-change="onBuyStocksChange(optionSelected)">
+                        <option ng-repeat="stock in stocks" value="{{stock.code}}">{{stock.name}}</option>
+                    </select>
+                </div>
+
+                <label for="sel1">Current Stock Price:</label>
+                <input type="text" class="form-control" id="selectbuystockprice" ng-value="buyStockPrice">
+
+                <label for="sel1">Quantity to Buy:</label>
+                <input type="text" class="form-control" id="selectbuyquantity" ng-value="buyQuantity"
+                       ng-change="onBuyQuantityChange(buyQuantity)" ng-model="buyQuantity">
+
+                <label for="sel1">Total:</label>
+                <input type="text" class="form-control" id="selectbuyquantity" ng-value="buyTotal">
             </div>
 
-            <label for="sel1">Current Stock Price:</label>
-            <input type="text" class="form-control" id="selectbuystockprice" value="{{stock.currprice}}">
+            <div name="sellsection" ng-show="optionSelected=='2'" class="check-element animate-show-hide">
+                <div class="form-group">
+                    <label for="sel1">Stock Name:</label>
+                    <select class="form-control" id="selectsellstock">
+                        <option ng-repeat="stock in stocks" value="{{stock.code}}">{{stock.name}}</option>
+                    </select>
+                </div>
 
-            <label for="sel1">Quantity to Buy:</label>
-            <input type="text" class="form-control" id="selectbuyquantity">
-        </div>
+                <label for="sel1">Quantity to Sell:</label>
+                <input type="text" class="form-control" id="selectsellquantity">
 
-        <div name="sellsection">
-            <div class="form-group">
-                <label for="sel1">Stock Name:</label>
-                <select class="form-control" id="selectsellstock">
-                    <option ng-repeat="stock in stocks" value="{{stock.code}}">{{stock.name}}</option>
-                </select>
+                <label for="sel1">Amount:</label>
+                <input type="text" class="form-control" id="selectsellstockprice">
+
             </div>
-
-            <label for="sel1">Quantity to Sell:</label>
-            <input type="text" class="form-control" id="selectsellquantity">
-
-            <label for="sel1">Amount:</label>
-            <input type="text" class="form-control" id="selectsellstockprice">
-
-        </div>
-
-        <a href="index.html" class="btn btn-large btn-success">Submit</a>
+            <button class="btn btn-lg btn-primary btn-block btn-signin"
+                    type="button" ng-click="submit(txnForm)">
+                Submit
+            </button>
+        </form>
     </div>
 
 
