@@ -26,7 +26,7 @@ stockidsApp.config(function($routeProvider) {
             redirectTo: '/data/'
         })
         .otherwise({
-	    	redirectTo: '/dashboard'
+	    	redirectTo: '/login'
 	    });
 	  });
 
