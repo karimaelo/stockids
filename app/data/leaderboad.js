@@ -1,4 +1,4 @@
-﻿leaderboard = [
+﻿topPlayers = [
     {
         username: 'kareem',
         email: 'karimaelo@gmail.com',

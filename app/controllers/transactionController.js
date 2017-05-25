@@ -4,6 +4,7 @@
     var TransactionController = function ($scope, $http, $filter, $window, $rootScope, $location) {
         $scope.message = "";
 
+        $scope.user = $rootScope.user;
         //$scope.buySelected = "true";
         //$scope.sellSelected = "false";
 
@@ -142,6 +143,21 @@
         };
 
         $scope.submit = function () {
+            var today = new Date();
+            var day = today.getDate();
+            var monthIndex = today.getMonth() + 1;
+            var year = today.getFullYear();
+
+            var formatDay = "" + year + "/" + monthIndex + "/" + day;
+
+            $rootScope.user.portfolio.push({
+                "stockcode": $scope.buyCodeSelected,
+                "boughtdate": formatDay,
+                "boughtprice": $scope.buyStockPrice,
+                "solddate": '',
+                "soldprice": 0,
+                "quantity": $scope.buyQuantity
+            });
             $window.alert("Transaction Submitted!");
             $location.path('/dashboard');
         };

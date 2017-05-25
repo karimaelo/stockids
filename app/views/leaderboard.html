@@ -23,11 +23,11 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr ng-repeat="user in leaderboard">
-                            <td>{{user.rank}}</td>
-                            <td>{{user.username}}</td>
-                            <td>{{user.email}}</td>
-                            <td>{{user.points}}</td>
+                        <tr ng-repeat="players in topPlayers">
+                            <td>{{players.rank}}</td>
+                            <td>{{players.username}}</td>
+                            <td>{{players.email}}</td>
+                            <td>{{players.points}}</td>
                         </tr>                       
                     </tbody>
                 </table>
