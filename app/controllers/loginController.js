@@ -1,10 +1,12 @@
 ﻿(function() {
-	var injectParams = [ '$scope', '$http', '$location' ];
+    var injectParams = [ '$scope', '$http', '$location', '$window', '$rootScope' ];
 
-	var LoginController = function($scope, $http, $location) {
+    var LoginController = function ($scope, $http, $location, $window, $rootScope) {
 		$scope.message = "";
 		$scope.email = "";
 		$scope.password = "";
+
+		$scope.user = null;
 
 		$scope.users = users;
 
@@ -15,7 +17,10 @@
 				$scope.result = angular.fromJson(value);
 				if ($scope.email == $scope.result.email && 
 						$scope.password == $scope.result.password) {
-					isValid = true;
+				    $rootScope.user = $scope.result;
+				    //$window.alert("Hello: " + $$rootScope.user.username);
+				    //$scope.message = "Hello: " + $$rootScope.user.username;
+				    isValid = true;
 				}
 			});
 			if (isValid) {
